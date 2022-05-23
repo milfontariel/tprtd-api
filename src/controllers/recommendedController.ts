@@ -16,7 +16,7 @@ export async function getRecommendedMovies(req: Request, res: Response) {
         genreId && genreId,
         watchProviderId && watchProviderId
       );
-    res.send(data).status(200);
+    res.send({ data: data, providers: req.cookies.providers }).status(200);
   } catch (error) {
     console.log(error);
   }

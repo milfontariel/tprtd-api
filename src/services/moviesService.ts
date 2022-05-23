@@ -10,7 +10,7 @@ export async function getMovieDetails(id: string) {
     params: {
       api_key: API_KEY,
       language: "pt-BR",
-      append_to_response: "images,videos,watch/providers",
+      append_to_response: "images,videos,watch/providers,credits",
       include_image_language: "en,null",
     },
   });
