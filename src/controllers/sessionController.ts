@@ -26,6 +26,8 @@ export async function postPersonalProviders(req: Request, res: Response) {
     res
       .cookie("providers", JSON.stringify(req.body.join("|")), {
         expires: new Date(Math.pow(2, 31) * 1000),
+        httpOnly: false,
+        secure: false,
       })
       .sendStatus(201);
   } catch (error) {
