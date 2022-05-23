@@ -14,8 +14,5 @@ export async function getMovieDetails(id: string) {
       include_image_language: "en,null",
     },
   });
-  const imdbAvegare = await moviesRepository.getImdbAverageById(
-    movieDetails?.data.imdb_id
-  );
-  return [movieDetails.data, imdbAvegare];
+  return movieDetails.data;
 }
