@@ -10,7 +10,7 @@ server.use(cookieParser());
 server.use(
   cors({
     credentials: true,
-    origin: ["https://tprtd.vercel.app"],
+    origin: ["https://tprtd.vercel.app", "http://localhost:3000"],
   })
 );
 server.use(json());
